@@ -1,2 +1,2 @@
-export { default as Prices } from './Prices';
-export { default as CryptoList } from './CryptoList';
+export { default as Price } from './Price';
+export { default as TickerList } from './TickerList';

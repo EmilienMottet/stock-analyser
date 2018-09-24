@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import request from 'axios';
-import { CryptoList, Prices } from "components";
+import { TickerList, Price } from "components";
 import { Page } from 'StyledComponents';
 import './App.css';
 
 class App extends Component {
   state = {
-    cryptoList: [],
-    selectedCrypto: null,
-    prices: null,
+    tickers: [],
+    ticker: null,
   };
 
   componentDidMount() {
-    request.get('http://localhost:5000/coinlist').then(({ data }) => {
-      this.setState({ cryptoList: data });
+    request.get('http://localhost:5000/tickers').then(({ data }) => {
+      this.setState({ tickers: data });
     });
   }
 
-  onCryptoSelect = crypto => {
-    this.setState({ selectedCrypto: crypto });
+  onSelect = ticker => {
+    this.setState({ ticker: ticker });
   };
 
 
@@ -29,8 +28,8 @@ class App extends Component {
           <h1 className="App-title">Crypto Analyser</h1>
         </header>
         <Page>
-          <CryptoList data={this.state.cryptoList} onCryptoSelect={this.onCryptoSelect} />
-          <Prices crypto={this.state.selectedCrypto} />
+          <TickerList data={this.state.tickers} onSelect={this.onSelect} />
+          <Price ticker={this.state.ticker} />
         </Page>
       </div>
     );
