@@ -1,7 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Quickstart documentation for Coding game
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+### Installing
+
+```
+npm install
+```
+
+### Running
+
+```
+npm start
+```
+
+### Deploying
+
+Follow Step 1 on the documentation "Getting started" on https://zeit.co/now#get-started
+
+Run the following command `now` on your Terminal.
+
+You should get a url which looks like 'app-djqksdjqk.now.sh'. Every time you deploy an update, the URL will be different.
+To keep the same URL through your developments, crypto-analyser-yourname.now.sh, you can run:
+
+```
+now alias set app-djqksdjqk.now.sh crypto-analyser-front-yourname.now.sh
+```
 
 ## Table of Contents
 

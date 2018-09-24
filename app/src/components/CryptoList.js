@@ -9,7 +9,7 @@ export default class CryptoList extends React.PureComponent {
   render() {
     return (
       <List>
-        <Filter placeholder='Cherchez une crypto...'
+        <Filter placeholder='Cherchez une cryptocurrency...'
                 onChange={(e) => this.setState({ filter: e.target.value.toLowerCase() })} />
         {this.props.data.filter(data => {
           return data.symbol.toLowerCase().includes(this.state.filter) || data.coin_name.toLowerCase().includes(this.state.filter);
