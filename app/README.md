@@ -19,10 +19,10 @@ Follow Step 1 on the documentation "Getting started" on https://zeit.co/now#get-
 Run the following command `now` on your Terminal.
 
 You should get a url which looks like 'app-djqksdjqk.now.sh'. Every time you deploy an update, the URL will be different.
-To keep the same URL through your developments, crypto-analyser-yourname.now.sh, you can run:
+To keep the same URL through your developments, stock-analyser-yourname.now.sh, you can run:
 
 ```
-now alias set app-djqksdjqk.now.sh crypto-analyser-front-yourname.now.sh
+now alias set app-djqksdjqk.now.sh stock-analyser-front-yourname.now.sh
 ```
 
 ## Table of Contents
