@@ -22,18 +22,6 @@ def tickers():
     return jsonify(tickers)
 
 
-@app.route('/coinlist')
-def coinlist():
-    data = []
-    object_data = get('https://www.cryptocompare.com/api/data/coinlist/').json()['Data']
-    for key in object_data.keys():
-        data.append({
-            'symbol': object_data[key]['Symbol'],
-            'coin_name': object_data[key]['CoinName']
-        })
-    return jsonify(data)
-
-
 @app.route('/price/<string:ticker>')
 def price(ticker):
     data = web.DataReader(ticker, 'yahoo', datetime.now() - timedelta(days=1), datetime.now())
